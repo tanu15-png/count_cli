@@ -15,7 +15,7 @@ program.command('count')
             }
             else{
                 const lines = data.split(' ').length;
-                const alpha = data.split('').filter(a => a != ' ').length;
+                const alpha = data.split('').filter(char => /[a-zA-Z]/.test(char)).length;
                 console.log(`number of words: ${lines}`);
                 console.log(`number of alphabets: ${alpha}`);
             }
